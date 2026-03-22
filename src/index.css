@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #e53935;
+  --color-accent-hover: #b71c1c;
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #151515;
+  --color-bg-tertiary: #1f1f1f;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d1d5db;
+  --color-text-muted: #9ca3af;
+  --color-border: #2a2a2a;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html, body {
+    @apply bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Custom Scrollbar styled for dark mode */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-primary); 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border); 
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-muted); 
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-[var(--color-bg-secondary)]/80 backdrop-blur-md border border-[var(--color-border)];
+  }
+  
+  .glass-card {
+    @apply bg-[var(--color-bg-tertiary)]/50 backdrop-blur-sm border border-[var(--color-border)] rounded-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-red-800;
+  }
+}
