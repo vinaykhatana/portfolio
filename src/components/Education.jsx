@@ -4,13 +4,21 @@ import { GraduationCap, Award, ExternalLink } from 'lucide-react';
 
 const Education = () => {
   const certifications = [
-    { title: 'Java Programming', issuer: 'NeoCollab' },
+    { 
+      title: 'Java Programming', 
+      issuer: 'NeoCollab',
+      link: 'https://drive.google.com/file/d/1G4FYeN6AqQGe4sO_jaenUUZlQjo9g8RT/view?usp=sharing'
+    },
     { 
       title: 'Network Communication', 
       issuer: 'Coursera',
       link: 'https://drive.google.com/file/d/1d9ZlpiGQ19_N8kgyCNu66REoF4xwmgT9/view?usp=sharing'
     },
-    { title: 'Web Development Bootcamp', issuer: 'Udemy' },
+    { 
+      title: 'Data Structures and Algorithm', 
+      issuer: 'Udemy',
+      link: 'https://drive.google.com/file/d/1ZO16pVj8ybnKzOTlq3TymLC_wE7Lhq8G/view?usp=sharing'
+    },
   ];
 
   return (

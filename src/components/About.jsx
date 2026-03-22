@@ -26,7 +26,7 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
-              I am a passionate Full Stack Developer and a 5th-semester B.Tech Computer Science & Engineering student at Lovely Professional University. My journey in tech is driven by an insatiable curiosity and a deep love for creating clean, efficient code that solves real-world problems.
+              I am a passionate Full Stack Developer and a 6th-semester B.Tech Computer Science & Engineering student at Lovely Professional University. My journey in tech is driven by an insatiable curiosity and a deep love for creating clean, efficient code that solves real-world problems.
             </p>
             <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
               I specialize in building scalable MERN stack applications, focusing on delivering dynamic, user-centric solutions. Beyond the screen, I have a strong interest in continuously improving my communication and public speaking skills, believing that communicating ideas effectively is just as important as writing the code that powers them.

@@ -8,7 +8,7 @@ const projects = [
     description: 'A comprehensive MERN stack e-portal designed for marketing and digital presence. Features seamless user authentication, intuitive dashboard, and optimized data delivery.',
     tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Tailwind CSS'],
     github: 'https://github.com/vinaykhatana',
-    live: '#',
+    live: 'https://nexus-vinays-projects-3c82d869.vercel.app/',
     image: '/projects/nexus.png',
   },
   {
