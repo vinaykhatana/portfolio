@@ -73,9 +73,8 @@ const Hero = () => {
             <Users className="w-5 h-5 ml-2" />
           </a>
           <a
-            href="https://drive.google.com/file/d/1iBTnAd4_n-6ZJHafSIZKm6NJ5No3GRYF/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
+            href="/resume.pdf"
+            download="Vinay_Kumar_Resume.pdf"
             className="w-full sm:w-auto px-8 py-4 flex items-center justify-center gap-2 text-white bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:bg-[var(--color-border)] rounded-xl font-bold tracking-wide transition-all hover:-translate-y-0.5 shadow-md"
           >
             GET RESUME
