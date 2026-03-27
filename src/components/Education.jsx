@@ -4,20 +4,25 @@ import { GraduationCap, Award, ExternalLink } from 'lucide-react';
 
 const Education = () => {
   const certifications = [
-    { 
-      title: 'Java Programming', 
+    {
+      title: 'Java Programming',
       issuer: 'NeoCollab',
       link: 'https://drive.google.com/file/d/1G4FYeN6AqQGe4sO_jaenUUZlQjo9g8RT/view?usp=sharing'
     },
-    { 
-      title: 'Network Communication', 
+    {
+      title: 'Network Communication',
       issuer: 'Coursera',
       link: 'https://drive.google.com/file/d/1d9ZlpiGQ19_N8kgyCNu66REoF4xwmgT9/view?usp=sharing'
     },
-    { 
-      title: 'Data Structures and Algorithm', 
-      issuer: 'Udemy',
+    {
+      title: 'Data Structures and Algorithm',
+      issuer: 'NeoCollab',
       link: 'https://drive.google.com/file/d/1ZO16pVj8ybnKzOTlq3TymLC_wE7Lhq8G/view?usp=sharing'
+    },
+    {
+      title: 'The Bits and Bytes of Computer Networking',
+      issuer: 'Coursera',
+      link: 'https://drive.google.com/file/d/13B69-O1IyiT7-eu6M_ROpi8ClkRVplTG/view?usp=sharing'
     },
   ];
 
@@ -38,6 +43,8 @@ const Education = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Education */}
           <motion.div
+            id="education"
+            className="scroll-mt-32"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -50,21 +57,49 @@ const Education = () => {
               <h3 className="text-2xl font-bold">Education</h3>
             </div>
 
-            <div className="glass-card p-8 border-l-4 border-l-[var(--color-accent)]">
-              <h4 className="text-xl font-bold text-[var(--color-text-primary)] mb-2">
-                B.Tech in Computer Science & Engineering
-              </h4>
-              <p className="text-[var(--color-accent)] font-medium mb-4">
-                Lovely Professional University
-              </p>
-              <div className="flex justify-between items-center text-[var(--color-text-secondary)] text-sm mb-4 bg-[var(--color-bg-primary)] px-4 py-2 rounded-lg inline-flex">
-                <span>2023 - Present</span>
-                <span className="mx-2">•</span>
-                <span>6th Semester</span>
+            <div className="space-y-6">
+              <div className="glass-card p-8 border-l-4 border-l-[var(--color-accent)]">
+                <h4 className="text-xl font-bold text-[var(--color-text-primary)] mb-2">
+                  B.Tech in Computer Science & Engineering
+                </h4>
+                <p className="text-[var(--color-accent)] font-medium mb-4">
+                  Lovely Professional University
+                </p>
+                <div className="flex items-center flex-wrap text-[var(--color-text-secondary)] text-sm mb-4 bg-[var(--color-bg-primary)] px-4 py-2 rounded-lg inline-flex">
+                  <span>2023 - Present</span>
+                  <span className="mx-2">•</span>
+                  <span>6th Semester</span>
+                  <span className="mx-2">•</span>
+                  <span>CGPA: 6.75</span>
+                </div>
+                <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                  Specializing in software engineering, full-stack web development, and algorithmic problem-solving.
+                </p>
               </div>
-              <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                Specializing in software engineering, full-stack web development, and algorithmic problem-solving. Active participant in coding clubs and technical seminars.
-              </p>
+
+              <div className="glass-card p-8 border-l-4 border-l-[var(--color-accent)]">
+                <h4 className="text-xl font-bold text-[var(--color-text-primary)] mb-2">
+                  Intermediate
+                </h4>
+                <p className="text-[var(--color-accent)] font-medium mb-4">
+                  Chand Ram Public School, New Delhi
+                </p>
+                <div className="flex items-center text-[var(--color-text-secondary)] text-sm mb-0 bg-[var(--color-bg-primary)] px-4 py-2 rounded-lg inline-flex">
+                  <span>Score: 76.4%</span>
+                </div>
+              </div>
+
+              <div className="glass-card p-8 border-l-4 border-l-[var(--color-accent)]">
+                <h4 className="text-xl font-bold text-[var(--color-text-primary)] mb-2">
+                  Matriculation
+                </h4>
+                <p className="text-[var(--color-accent)] font-medium mb-4">
+                  Rao Pahlad Singh Sr. Sec. School, Mahendergarh, Haryana
+                </p>
+                <div className="flex items-center text-[var(--color-text-secondary)] text-sm mb-0 bg-[var(--color-bg-primary)] px-4 py-2 rounded-lg inline-flex">
+                  <span>Score: 93%</span>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -86,7 +121,7 @@ const Education = () => {
               {certifications.map((cert) => {
                 const CardWrapper = cert.link ? 'a' : 'div';
                 const wrapperProps = cert.link ? { href: cert.link, target: '_blank', rel: 'noreferrer' } : {};
-                
+
                 return (
                   <CardWrapper
                     key={cert.title}

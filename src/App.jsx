@@ -23,7 +23,7 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="border-t border-[var(--color-border)] bg-[var(--color-bg-secondary)]/50 py-8 text-center">
+      <footer className="border-t border-[var(--color-border)] bg-[var(--color-bg-secondary)]/50 py-8 text-center pb-32">
         <p className="text-[var(--color-text-secondary)]">
           © {new Date().getFullYear()} Vinay Kumar Khatana. Built with React & Tailwind.
         </p>

@@ -4,28 +4,43 @@ import { Github, ExternalLink, Folder } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Nexus Marketing',
-    description: 'A comprehensive MERN stack e-portal designed for marketing and digital presence. Features seamless user authentication, intuitive dashboard, and optimized data delivery.',
+    title: 'YourTherapist',
+    description: '',
+    details: [
+      { label: 'The Challenge', text: 'People seeking mental health support face friction in finding trusted professionals, booking sessions, and managing care in one secure place.' },
+      { label: 'The Action', text: 'Built a full-stack MERN platform with secure authentication, verified therapist and patient profile flows, and an intuitive appointment scheduling experience.' },
+      { label: 'The Result', text: 'Reduced booking friction, improved trust through secure access and structured profiles, and enabled users to manage therapy journeys from one reliable dashboard.' }
+    ],
     tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Tailwind CSS'],
     github: 'https://github.com/vinaykhatana',
-    live: 'https://nexus-vinays-projects-3c82d869.vercel.app/',
-    image: '/projects/nexus.png',
+    live: 'https://yourtherapist.designschool.in/',
+    image: '/projects/yourtherapist.png',
   },
   {
-    title: 'DSA Visualizer',
-    description: 'An interactive web application built to visualize complex Data Structures and Algorithms. Helps students understand sorting, searching, and pathfinding algorithms in real-time.',
-    tech: ['React.js', 'Framer Motion', 'Tailwind CSS'],
+    title: 'Sudoku Solver Visualizer',
+    description: '',
+    details: [
+      { label: 'The Challenge', text: 'Students and beginners find it hard to understand how backtracking works in practice without an interactive, step-by-step visual explanation.' },
+      { label: 'The Action', text: 'Built an interactive grid for custom puzzle input, visualized each solving step, and strengthened input validation with optimized backtracking logic.' },
+      { label: 'The Result', text: 'Made backtracking easier to understand for learners and reduced solution computation time by 35% through constraint-based optimizations.' }
+    ],
+    tech: ['React.js', 'Data Structures', 'Algorithms'],
     github: 'https://github.com/vinaykhatana',
-    live: '#',
-    image: '/projects/dsa.png',
+    live: 'https://sudoku-solver-theta-nine.vercel.app/',
+    image: '/projects/sudokusolver.png',
   },
   {
-    title: 'DevChat Application',
-    description: 'A real-time chat application for developers with channels, direct messaging, and code snippet sharing capabilities.',
-    tech: ['Next.js', 'Socket.io', 'Tailwind CSS', 'PostgreSQL'],
+    title: 'AK Debt Planner',
+    description: '',
+    details: [
+      { label: 'The Challenge', text: 'Many people struggle to prioritize multiple debts and create realistic repayment plans, leading to confusion, stress, and poor financial decisions.' },
+      { label: 'The Action', text: 'Built a React-based planning dashboard that captures debt inputs, prioritizes repayment paths, and uses the Google Gemini API for personalized financial guidance.' },
+      { label: 'The Result', text: 'Helped users turn scattered debt data into clear repayment strategies, reducing decision confusion and improving confidence in monthly financial planning.' }
+    ],
+    tech: ['Javascript', 'Google Gemini API', 'Tailwind CSS'],
     github: 'https://github.com/vinaykhatana',
-    live: '#',
-    image: '/projects/devchat.png',
+    live: 'https://arun.42web.io/?i=2',
+    image: '/projects/debtplanner.png',
   },
 ];
 
@@ -86,9 +101,20 @@ const Projects = () => {
                   </a>
                 </h3>
 
-                <p className="text-[var(--color-text-secondary)] mb-8 flex-grow leading-relaxed">
-                  {project.description}
-                </p>
+                {project.details ? (
+                  <div className="mb-8 flex-grow flex flex-col gap-3">
+                    {project.details.map((detail, idx) => (
+                      <div key={idx} className="text-[13px] leading-relaxed">
+                        <span className="font-semibold text-[var(--color-accent)] block mb-0.5">{detail.label}</span>
+                        <span className="text-[var(--color-text-secondary)]">{detail.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-[var(--color-text-secondary)] mb-8 flex-grow leading-relaxed">
+                    {project.description}
+                  </p>
+                )}
 
                 <ul className="flex flex-wrap gap-3 mt-auto">
                   {project.tech.map((tech) => (

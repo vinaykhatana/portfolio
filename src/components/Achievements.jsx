@@ -1,31 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Star, Medal, Code } from 'lucide-react';
+import { Bot, Award } from 'lucide-react';
 
 const achievements = [
   {
-    title: 'Placement Preparation',
-    description: 'Actively preparing for placements during my 5th-semester engineering journey at LPU, with a strong focus on mastering Data Structures and Algorithms (DSA) and Problem Solving.',
-    tag: 'DSA & Problem Solving',
-    icon: Code,
+    title: 'AI Integrations',
+    description: 'Developed and launched specialized AI-powered tools, including AK Debt Planner, leveraging the Google Gemini API.',
+    icon: Bot,
+    iconColor: 'text-purple-400',
   },
   {
-    title: 'MERN Stack Project - Nexus',
-    description: 'Successfully built and deployed "Nexus," a comprehensive full-stack e-portal tailored for marketing, utilizing modern MERN stack technologies.',
-    tag: 'Full-Stack Development',
-    icon: Star,
-  },
-  {
-    title: 'Academic Excellence',
-    description: 'Pursuing B.Tech in Computer Science and Engineering, maintaining a strong academic foundation, particularly in core subjects like Finite Automata and Theory of Computation.',
-    tag: 'Academic Journey',
-    icon: Trophy,
-  },
-  {
-    title: 'Soft Skills Enhancement',
-    description: 'Dedicated to continuous personal growth with a strong commitment to improving communication and public speaking skills to effectively convey ideas.',
-    tag: 'Personal Growth',
-    icon: Medal,
+    title: 'Hackathon participant',
+    description: 'Led the frontend design and organized the project structure for our team’s solution at the Binary Blitz Hackathon by Coding Ninjas',
+    icon: Award,
+    iconColor: 'text-yellow-400',
   },
 ];
 
@@ -40,7 +28,7 @@ const Achievements = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Achievements & Milestones</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Key Achievements</h2>
           <div className="w-20 h-1 bg-[var(--color-accent)] mx-auto rounded-full"></div>
         </motion.div>
 
@@ -52,26 +40,18 @@ const Achievements = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card flex flex-col h-full group hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-[var(--color-accent)]/10 overflow-hidden bg-[var(--color-bg-secondary)] rounded-2xl border border-[var(--color-border)]"
+              className="glass-card flex flex-col h-full group hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-[var(--color-accent)]/10 overflow-hidden bg-[var(--color-bg-secondary)] rounded-2xl border border-[var(--color-border)] border-l-2 border-t-2 border-l-[var(--color-accent)] border-t-[var(--color-accent)]"
             >
-              {/* Content Container */}
-              <div className="p-8 flex flex-col flex-grow relative">
-                <div className="mb-6 flex items-start gap-4">
-                  <div className="p-4 rounded-xl bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] group-hover:text-[var(--color-accent)] group-hover:bg-[var(--color-accent)]/10 transition-colors shadow-lg">
-                    <item.icon className="w-8 h-8" />
-                  </div>
+              <div className="p-6 md:p-8 flex items-start gap-4 md:gap-6 flex-grow">
+                <div className={`flex-shrink-0 p-3 md:p-4 rounded-xl bg-[var(--color-bg-tertiary)] ${item.iconColor} shadow-lg`}>
+                  <item.icon className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
-                
-                <div className="mt-2">
-                  <span className="inline-block text-sm font-semibold text-[var(--color-accent)] px-4 py-1.5 bg-[var(--color-accent)]/10 rounded-full border border-[var(--color-accent)]/20 mb-5">
-                    {item.tag}
-                  </span>
-                  
-                  <h3 className="font-bold mb-4 text-2xl text-[var(--color-text-primary)]">
+
+                <div className="flex flex-col mt-0 md:mt-1">
+                  <h3 className="font-bold mb-2 md:mb-3 text-xl md:text-2xl text-[var(--color-text-primary)]">
                     {item.title}
                   </h3>
-
-                  <p className="text-[var(--color-text-secondary)] leading-relaxed text-lg">
+                  <p className="text-[var(--color-text-secondary)] leading-relaxed md:text-lg">
                     {item.description}
                   </p>
                 </div>
